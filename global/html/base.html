@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% comment %} Título da Página {% endcomment %}
+    <title>{% block title %}{% endblock title %}</title>
+
+    {% comment %} Cabeçalho da Página - Links {% endcomment %}
+    {% include "recipes/partials/head.html" %}
+
+</head>
+<body>
+    {% comment %} Cabeçalho da Página {% endcomment %}
+    {% include "recipes/partials/header.html"%}
+
+    {% comment "" %} Bsuca{% endcomment %}
+    {% include "recipes/partials/search.html" %}
+
+    {% comment %} Conteúdo {% endcomment %}
+    <main class="main_content_container">
+        {% block content %}{% endblock content %}
+    </main>
+
+    {% include "recipes/partials/footer.html" %}
+</body>
+</html>
